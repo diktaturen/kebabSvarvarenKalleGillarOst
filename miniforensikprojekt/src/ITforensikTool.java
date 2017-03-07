@@ -17,7 +17,7 @@ public class ITforensikTool
          // Skriv ut alternativen
          System.out.println("Välj alternativ");
 		 
-		 System.out.println("0. Avsluta");
+      System.out.println("0. Avsluta");
          System.out.println("1. Lista katalog");
          System.out.println("2. Lista en typ av fil");
          System.out.println("3. Sok i filer");
@@ -32,8 +32,8 @@ public class ITforensikTool
          // Beroende på svar, anropa respektive metod
          switch(svar) {
 			 
-		 case 0:
-               System.out.println("Avslutar...");
+		case 0:
+			System.out.println("Avslutar..");
                exiting = true;
                break;
          case 1:
@@ -42,6 +42,7 @@ public class ITforensikTool
                pressEnter();
                break;
          case 2:
+               System.out.println("Lista en typ av fil");
                CallFindExtension.main(args);               
                pressEnter();
                break;
