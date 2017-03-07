@@ -16,27 +16,32 @@ public class ITforensikTool
       while(!exiting) {
          // Skriv ut alternativen
          System.out.println("Välj alternativ");
-      
+		 
+		 System.out.println("0. Avsluta");
          System.out.println("1. Lista katalog");
          System.out.println("2. Lista en typ av fil");
          System.out.println("3. Sok i filer");
          System.out.println("4. Konventera fil för sökning?");
          System.out.println("5. Sök modifierade filer efter datum");
          System.out.println("6. Kryptera filer");
-         System.out.println("7. Avsluta");
+         
       
          // Läs in svar
          int svar = tagent.nextInt();
       
          // Beroende på svar, anropa respektive metod
          switch(svar) {
+			 
+		 case 0:
+               System.out.println("Avslutar...");
+               exiting = true;
+               break;
          case 1:
                System.out.println("Lista katalog");
                DirReader.main(args);               
                pressEnter();
                break;
          case 2:
-               System.out.println("Lista en typ av fil");
                CallFindExtension.main(args);               
                pressEnter();
                break;
@@ -53,10 +58,6 @@ public class ITforensikTool
                break;
          case 6:
                System.out.println("Kryptera filer");
-               break;
-         case 7:
-               System.out.println("Avslutar..");
-               exiting = true;
                break;
          default:
                System.out.println("Felaktigt svar");
