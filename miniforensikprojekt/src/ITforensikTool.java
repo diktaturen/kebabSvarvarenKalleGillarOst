@@ -17,13 +17,13 @@ public class ITforensikTool
          // Skriv ut alternativen
          System.out.println("Välj alternativ");
 		 
-      System.out.println("0. Avsluta");
+         System.out.println("0. Avsluta");
          System.out.println("1. Lista katalog");
          System.out.println("2. Lista en typ av fil");
          System.out.println("3. Sok i filer");
          System.out.println("4. Konventera fil för sökning?");
          System.out.println("5. Sök modifierade filer efter datum");
-         System.out.println("6. Kryptera filer");
+         System.out.println("6. Kryptera/Dekryptera filer");
          
       
          // Läs in svar
@@ -32,8 +32,8 @@ public class ITforensikTool
          // Beroende på svar, anropa respektive metod
          switch(svar) {
 			 
-		case 0:
-			System.out.println("Avslutar..");
+		   case 0:
+			      System.out.println("Avslutar..");
                exiting = true;
                break;
          case 1:
@@ -56,9 +56,13 @@ public class ITforensikTool
                break;
          case 5:
                System.out.println("Sök modifierade filer efter datum");
+               ByDate.listFiles();
+               pressEnter();
                break;
          case 6:
-               System.out.println("Kryptera filer");
+               System.out.println("Kryptera/Dekryptera filer");
+               Encryption.Kryptering();
+               pressEnter();
                break;
          default:
                System.out.println("Felaktigt svar");

@@ -8,6 +8,26 @@ import java.util.ArrayList;
 
 public class Findinfo
 {
+   public static void main(String[] args)
+   {
+      Scanner tagent = new Scanner(System.in);
+           
+      System.out.println("Vart vill du soka? (absolut sokvag)");
+      String sokvag = tagent.next();
+      
+      File path = new File(sokvag);
+      File[] filer = path.listFiles();
+      
+      System.out.println("Ange sokord");
+      String sokord = tagent.next();
+      
+      System.out.println("I vilken typ av fil?");
+      String datatyp = tagent.next();
+      
+      File[] filerMedSokord = findIn(sokord,filer,datatyp);      
+      
+   
+   }
 
    public static File[] findIn(String sok, File[] filer, String filtyp)
    {
