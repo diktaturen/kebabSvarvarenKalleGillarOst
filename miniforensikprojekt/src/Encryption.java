@@ -1,4 +1,4 @@
-﻿
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -10,6 +10,7 @@ public class Encryption
     public void Kryptering(){
         //variabler
         String text, path, spara, klar = "";;
+        int count = 0;
 
         //scanner
         Scanner in = new Scanner(System.in);
@@ -45,13 +46,18 @@ public class Encryption
                 } catch (IOException e) {
 
                     System.out.println(e);
+                    count++;
                 }
 
             }
 
-        } catch(Exception e) {System.out.println(e); }
+        } catch(Exception e) {System.out.println(e);
+        count++;}
 
-        System.out.println("Klar!");
+        if(count < 1){
+            System.out.println("Klar!");
+        }
+
     }
     public String encrypt(String text, String klar_text) {
 
